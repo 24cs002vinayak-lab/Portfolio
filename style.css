@@ -8,9 +8,10 @@
 }
 
 body {
-    background: #0f172a;
-    color: #e5e7eb;
-    line-height: 1.6;
+font-family:'Roboto', sans-serif;
+background:#0f172a;
+color:#e5e7eb;
+line-height:1.6;
 }
 
 .container {
@@ -24,14 +25,18 @@ header {
     margin-bottom: 40px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #38bdf8;
+header h1{
+font-family:'Poppins', sans-serif;
+font-size:40px;
+font-weight:700;
+color:#38bdf8;
+letter-spacing:1px;
 }
-
-.subtitle {
-    color: #94a3b8;
-    font-size: 1.1rem;
+.subtitle{
+font-size:18px;
+color:#94a3b8;
+font-weight:400;
+font-family:'Roboto', sans-serif;
 }
 
 section {
@@ -41,9 +46,25 @@ section {
     border-radius: 8px;
 }
 
-section h2 {
-    color: #38bdf8;
-    margin-bottom: 10px;
+section h2 { 
+font-family:'Poppins', sans-serif;
+font-size:28px;
+font-weight:600;
+color:#38bdf8;
+margin-bottom:15px;
+letter-spacing:1px;
+text-align: center;
+text-transform: uppercase;
+position:relative;
+}
+section h2::after{
+content:"";
+display:block;
+width:100px;
+height:3px;
+background:#22c55e;
+margin:auto;
+border-radius:2px;
 }
 
 .project h3 {
@@ -66,9 +87,10 @@ ul {
 
 footer {
     text-align: center;
+    font-family:'Roboto', sans-serif;
     margin-top: 30px;
     color: #94a3b8;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
 .profile-photo {
     display: flex;
@@ -79,7 +101,7 @@ footer {
 .profile-photo img {
     width: 140px;
     height: 140px;
-    border-radius: 50%;
+    border-radius: 75%;
     object-fit: cover;
     border: 4px solid #38bdf8;
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
@@ -95,7 +117,7 @@ footer {
     padding: 15px 40px;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 
 .nav-logo {
@@ -114,10 +136,11 @@ footer {
 .nav-links a {
     text-decoration: none;
     color: #e5e7eb;
-    font-size: 1rem;
+    font-size: 16px;
+    letter-spacing:0.5px ;
     transition: color 0.3s;
      font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .nav-links a:hover {
@@ -127,4 +150,68 @@ footer {
 /* Push content below fixed navbar */
 .container {
     margin-top: 80px;
+}
+/* Skills Container */
+.skills-container{
+display:flex;
+gap:20px;
+overflow-x:auto;
+padding:20px 10px;
+scroll-behavior:smooth;
+}
+
+/* Hide scrollbar (optional) */
+.skills-container::-webkit-scrollbar{
+height:8px;
+}
+
+.skills-container::-webkit-scrollbar-thumb{
+background:#38bdf8;
+border-radius:10px;
+}
+
+/* Skill Card */
+.skill-card{
+min-width:300px;
+height:200px;
+background:#020617;
+border-radius:10px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+transition:0.3s;
+cursor:pointer;
+border:1px solid #1e293b;
+}
+
+/* Skill Image */
+.skill-card img{
+width:55px;
+height:55px;
+margin-bottom:8px;
+}
+
+/* Glow Hover Effect */
+.skill-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(34,197,94,0.8);
+border-color:#22c55e;
+}
+.skill-title{
+font-size:18px;        /* change title size */
+font-weight:600;       /* boldness */
+color:#38bdf8;         /* title color */
+margin-top:8px;
+margin-bottom:5px;
+letter-spacing:0.5px;
+text-transform: uppercase;
+font-family:'Poppins', sans-serif;
+}
+
+.skill-tech{
+font-size:14px;
+font-family:'Poppins', sans-serif;
+color:#94a3b8;
+line-height:1.4;
 }
